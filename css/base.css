@@ -1,0 +1,30 @@
+body{width:device-width;
+background-color:#dddddd;
+background-image: url(http://cn.bing.com/ImageResolution.aspx?w=768&h=1366);
+background-attachment:fixed;
+background-position:top top;
+background-repeat:no-repeat;
+background-size:100%;
+}
+ 
+
+#back{
+width:100%;
+}
+h1{
+text-align:center;
+}
+a{text-decoration: none;}
+td{background-color:#d0d0d0;}
+table{
+width:100%;
+}
+td{
+width:25%;
+text-align:center; 
+}
+nav{width:100%;background-color:#ffddff; display: -webkit-flex;
+    display: flex;}
+nav>a{width:25%;text-align:center;}
+
+

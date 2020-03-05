@@ -1,0 +1,258 @@
+<html>
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <META HTTP-EQUIV="Refresh" content="3600">
+    <title>网址导航</title>
+
+
+    <link rel="stylesheet" href="css/base.css">
+    <script type="text/javascript" src="js/base.js">
+    </script>
+
+</head>
+<body>
+
+
+<div id="back">
+
+    <center>
+        <p><span id=aa></span></p>
+
+    </center>
+
+
+    <input type="search" onkeyup="search_onkeyup(this)" id="search"
+           style="width:80%; height: 50px; padding:  2px 2px 2px 2px; float: left;">
+    <button type="button" onclick="search()"
+            style="width:20%; height: 50px; padding:  2px 2px 2px 2px; float: left;">搜索
+    </button>
+
+
+    <br/>
+
+
+    <script type="text/javascript">
+function showLocale(objD)
+{
+var str,colorhead,colorfoot;
+var yy = objD.getYear();
+if(yy<1900) yy = yy+1900;
+var MM = objD.getMonth()+1;
+if(MM<10) MM = '0' + MM;
+var dd = objD.getDate();
+if(dd<10) dd = '0' + dd;
+var hh = objD.getHours();
+if(hh<10) hh = '0' + hh;
+var mm = objD.getMinutes();
+if(mm<10) mm = '0' + mm;
+var ss = objD.getSeconds();
+if(ss<10) ss = '0' + ss;
+var ww = objD.getDay();
+if ( ww==0 ) colorhead="<font color=\"#FF0000\">";
+if ( ww > 0 && ww < 6 ) colorhead="<font color=\"#373737\">";
+if ( ww==6 ) colorhead="<font color=\"#008000\">";
+if (ww==0) ww="星期日";
+if (ww==1) ww="星期一";
+if (ww==2) ww="星期二";
+if (ww==3) ww="星期三";
+if (ww==4) ww="星期四";
+if (ww==5) ww="星期五";
+if (ww==6) ww= "星期六";
+colorfoot="</font>"
+str = colorhead + yy + "-" + MM + "-" + dd + " " + hh + ":" + mm + ":" + ss + " " + ww + colorfoot;
+return(str);
+}
+function tick()
+{
+var today;
+today = new Date();
+document.getElementById("aa").innerHTML = showLocale(today);
+window.setTimeout("tick()", 1000);
+}
+tick();
+
+    </script>
+
+
+    <table>
+        <h1>搜索&导航</h1>
+        <tr>
+            <td><p><a href="https://m.baidu.com">百度</a></p></td>
+            <td><p><a href="https://m.so.com/">好搜</a></p></td>
+            <td><p><a href="https://m.sm.cn/">神马</a></p></td>
+            <td><p><a href="http://m.sogou.com/">搜狗</a></p></td>
+        </tr>
+        <tr>
+            <td><p><a href="https://www.google.com/ncr">谷歌</a></p></td>
+            <td><p><a href="http://cn.bing.com/">必应</a></p></td>
+            <td><p><a href="https://duckduckgo.com">Duckduckgo</a></p></td>
+            <td><p><a href="http://sg.search.yahoo.com/">雅虎</a></p></td>
+        </tr>
+        <tr>
+            <td><p><a href="https://www.yandex.com/">Yandex</a></p></td>
+            <td><p><a href="http://www.baidu2b.com/">良心搜索</a></p></td>
+            <td><p><a href="http://m.ilxdh.com/">龙轩导航</a></p></td>
+            <td><p><a href="http://www.haoyonghaowan.com/">好用好玩</a></p></td>
+
+        </tr>
+    </table>
+
+
+    <table>
+        <h1>常用网站</h1>
+
+        <tr>
+            <td><p><a href="https://sina.cn/">新浪</a></p></td>
+            <td><p><a href="https://m.sohu.com/">搜狐</a></p></td>
+            <td><p><a href="http://3g.163.com/touch/">网易</a></p></td>
+            <td><p><a href="https://i.ifeng.com/">凤凰</a></p></td>
+        </tr>
+
+
+        <tr>
+            <td><p><a href="http://m.xinhuanet.com/">新华</a></p></td>
+            <td><p><a href="http://m.people.cn/">人民</a></p></td>
+            <td><p><a href="http://m.cctv.com/index.shtml?k_f=cbsjysw_1">央视</a></p></td>
+            <td><p><a href="http://wap.cac.gov.cn/">网信</a></p></td>
+        </tr>
+
+
+        <tr>
+            <td><p><a href="http://m.china.com.cn/index.shtml">中国网</a></p></td>
+            <td><p><a href="http://m.gmw.cn/">光明网</a></p></td>
+            <td><p><a href="http://m.ce.cn/">中经网</a></p></td>
+            <td><p><a href="http://www.qstheory.cn/">求是网</a></p></td>
+        </tr>
+
+
+        <tr>
+            <td><p><a href="http://info.3g.qq.com/g/">腾讯</a></p></td>
+            <td><p><a href="https://m.taobao.com/#index">淘宝</a></p></td>
+            <td><p><a href="http://touch.qunar.com/">去哪儿</a></p></td>
+            <td><p><a href="http://m.jd.com/">京东</a></p></td>
+        </tr>
+    </table>
+
+
+    <table>
+        <h1>新闻导航</h1>
+        <tr>
+            <td><p><a href="http://m.toutiao.com/">今日头条</a></p></td>
+            <td><p><a href="http://m.huanqiu.com/">环球网</a></p></td>
+            <td><p><a href="http://m.youth.cn/">中青网</a></p></td>
+            <td><p><a href="http://m.news.baidu.com/">百度新闻</a></p></td>
+        </tr>
+
+        <tr>
+            <td><p><a href="http://www.yidianzixun.com/">一点资讯</a></p></td>
+            <td><p><a href="http://m.cankaoxiaoxi.com/">参考消息</a></p></td>
+            <td><p><a href="http://3g.21cn.com/">21CN</a></p></td>
+            <td><p><a href="https://zhhrb.sinaapp.com/">知乎日报</a></p></td>
+        </tr>
+    </table>
+
+
+    <table>
+        <h1>视频网站</h1>
+        <tr>
+            <td><p><a href="http://m.92kanba.com/">92看吧</a></p></td>
+            <td><p><a href="http://m.quankan.tv/">全看网</a></p></td>
+            <td><p><a href="http://m.q4yy.com/">A4YY</a></p></td>
+            <td><p><a href="http://1314tv.cc/">1314TV</a></p></td>
+        </tr>
+
+        <tr>
+            <td><p><a href="http://m.v.qq.com/">腾讯视频</a></p></td>
+            <td><p><a href="http://www.youku.com/">优酷</a></p></td>
+            <td><p><a href="http://www.tudou.com/">土豆</a></p></td>
+            <td><p><a href="http://m.le.com/">乐视视频</a></p></td>
+        </tr>
+
+        <tr>
+            <td><p><a href="http://m.iqiyi.com/">爱奇艺</a></p></td>
+            <td><p><a href="http://m.mgtv.com/">芒果TV</a></p></td>
+            <td><p><a href="http://m.tv.sohu.com/">搜狐视频</a></p></td>
+            <td><p><a href="http://m.pptv.com/">PPTV聚力</a></p></td>
+        </tr>
+        <tr>
+            <td><p><a href="http://m.acfun.cn/">AcFun</a></p></td>
+            <td><p><a href="http://m.bilibili.com/">Bilibili</a></p></td>
+            <td><p><a href="http://m.lamian.tv/">拉面</a></p></td>
+            <td><p><a href="http://m.acfun.cn/">AcFun</a></p></td>
+        </tr>
+    </table>
+
+
+    <table>
+        <h1>音乐网站</h1>
+        <tr>
+            <td><p><a href="https://m.y.qq.com/">QQ音乐</a></p></td>
+            <td><p><a href="http://m.kugou.com/">酷狗音乐</a></p></td>
+            <td><p><a href="http://h.xiami.com/">虾米音乐</a></p></td>
+            <td><p><a href="http://m.kuwo.cn/">酷我音乐</a></p></td>
+        </tr>
+        <tr>
+            <td><p><a href="http://music.baidu.com/">百度音乐</a></p></td>
+            <td><p><a href="http://m.1ting.com/">一听音乐</a></p></td>
+            <td><p><a href="http://m.9ku.com/">九酷音乐</a></p></td>
+            <td><p><a href="http://m.yinyuetai.com/">音悦台</a></p></td>
+        </tr>
+
+    </table>
+
+
+    <table>
+        <h1>小说网站</h1>
+
+        <tr>
+            <td><p><a href="http://m.34xs.com/">34小说</a></p></td>
+            <td><p><a href="http://repo.xposed.info/">Xposed库</a></p></td>
+            <td><p><a href="http://debugtbs.qq.com">DebugTbs</a></p></td>
+            <td><p><a href="http://debugtbs.qq.com">DebugTbs</a></p></td>
+        </tr>
+
+    </table>
+
+    <table>
+        <h1>学报导航</h1>
+
+        <tr>
+            <td><p><a href="http://jst.tsinghuajournals.com">清华大学</a></p></td>
+            <td><p><a href="http://www.zndxzk.com.cn/">中南大学</a></p></td>
+            <td><p><a href="http://journals.tju.edu.cn/zrb/">天津大学（自然版）</a></p></td>
+            <td><p><a href="http://debugtbs.qq.com">DebugTbs</a></p></td>
+        </tr>
+
+    </table>
+
+
+    <table>
+        <h1>工具&教程</h1>
+        <tr>
+            <td><p><a href="http://debugtbs.qq.com">DebugTbs</a></p></td>
+            <td><p><a href="http://debugx5.qq.com">DebugX5</a></p></td>
+            <td><p><a href="http://x5.tencent.com/tbs/">TBS官网</a></p></td>
+            <td><p><a href="http://bbs.mb.qq.com/forum-110-1.html">X5内核论坛</a></p></td>
+        </tr>
+        <tr>
+            <td><p><a href="https://m.runoob.com/">菜鸟教程</a></p></td>
+            <td><p><a href="http://hukai.me/android-training-course-in-chinese/index.html">官方教程</a>
+            </p></td>
+            <td><p><a href="http://www.jdzhao.com/">安卓手册</a></p></td>
+            <td><p><a href="http://www.c-launcher.com/">主题制作</a></p></td>
+        </tr>
+
+        <tr>
+            <td><p><a href="http://c.tianhezulin.com/">制图平台</a></p></td>
+            <td><p><a href="http://m.oschina.net/">开源中国</a></p></td>
+        </tr>
+
+
+    </table>
+
+
+</div>
+</body>
+</html>

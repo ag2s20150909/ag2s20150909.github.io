@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>孝感市新增确诊变化图</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+<body>
+<!--为echarts准备一个容器，画图就画在里面-->
+<div id="box" style="width: 1920px;height:1080px;"></div>
+<script>
+    //初始化ehcharts实例
+    var myChart=echarts.init(document.getElementById("box"));
+    //指定图表的配置项和数据
+    var option={
+        //标题
+        title:{
+          text:'孝感市新增确诊变化图'
+        },
+		tooltip : {
+        trigger: 'axis'
+        },
+        //工具箱
+        //保存图片
+        toolbox:{
+            show:true,
+            feature:{
+                saveAsImage:{
+                    show:true
+                }
+            }
+        },
+        //图例-每一条数据的名字叫销量
+        legend:{
+            data:['孝南区', '汉川市', '应城市', '云梦县', '安陆市', '大悟县', '孝昌县']
+        },
+        //x轴
+        xAxis:{
+            data:['2020年01月26日', '2020年01月27日', '2020年01月28日', '2020年01月29日', '2020年01月30日', '2020年01月31日', '2020年02月01日', '2020年02月02日']
+        },
+        //y轴没有显式设置，根据值自动生成y轴
+        yAxis:{},
+        //数据-data是最终要显示的数据
+        series:[{"name": "孝南区","type": "line","smooth": false,"label": "{show:true,position:'top'}","data": ["29","24","48","34","27","29","45","21"]},{"name": "汉川市","type": "line","smooth": false,"label": "{show:true,position:'top'}","data": ["7","30","31","42","33","2","46","28"]},{"name": "应城市","type": "line","smooth": false,"label": "{show:true,position:'top'}","data": ["0","8","7","4","0","9","6","43"]},{"name": "云梦县","type": "line","smooth": false,"label": "{show:true,position:'top'}","data": ["2","3","4","8","8","2","10","25"]},{"name": "安陆市","type": "line","smooth": false,"label": "{show:true,position:'top'}","data": ["5","3","3","19","47","30","0","10"]},{"name": "大悟县","type": "line","smooth": false,"label": "{show:true,position:'top'}","data": ["1","0","6","8","26","13","14","7"]},{"name": "孝昌县","type": "line","smooth": false,"label": "{show:true,position:'top'}","data": ["1","5","2","10","1","2","0","35"]}]
+    };
+    //使用刚刚指定的配置项和数据项显示图表
+    myChart.setOption(option);
+</script>
+</body>
+</html>
